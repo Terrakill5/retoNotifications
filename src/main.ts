@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import MensajeNotificacion from "./components/MensajeNotificacion.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.component('mensaje-notificacion', MensajeNotificacion);
+
+app.mount('#app');
