@@ -1,7 +1,8 @@
 <template>
-  <section class="d-flex flex-column mx-3 my-2" :class="{ fondo: mainProps.new }">
-    <div class="d-flex">
-      <img
+  <section class="d-flex flex-column mx-3 my-2 seccion" :class="{ fondo: mainProps.new }">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex">
+        <img
         :src="mainProps.imagen"
         :alt="'imagen de' + mainProps.name"
         class="mx-3 my-auto"
@@ -15,16 +16,20 @@
           }}</a>
           <br /><span class="color-text">{{ mainProps.time }}</span>
         </p>
+      </div>
+      </div>
+      <div class="flex-grow-1 mt-3">
         <img
           v-if="mainProps.imagenDerecha"
           :src="mainProps.imagenDerecha"
-          class="my-1"
+          class=""
         />
       </div>
+      
     </div>
 
-    <div v-if="mainProps.message" class="border mensaje w-75">
-      <p v-if="mainProps.message">{{ mainProps.message }}</p>
+    <div v-if="mainProps.message" class="border mensaje px-3">
+      <p v-if="mainProps.message" class="color-text">{{ mainProps.message }}</p>
     </div>
   </section>
 </template>
@@ -73,7 +78,13 @@ a {
 }
 
 .mensaje {
-  margin-left: 40px;
+  margin-left: 68px;
+  width: 85%;
+  padding-top: 1rem;
+}
+
+.seccion {
+  max-width: 650px;
 }
 
 .action {

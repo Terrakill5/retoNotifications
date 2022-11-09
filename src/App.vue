@@ -55,7 +55,7 @@
         name="Nathan Peterson"
         text="reacted to your recent post"
         time="2 weeks ago"
-        actionName="end-game strategies to increase your win rate"
+        actionName="5 end-game strategies to increase your win rate"
       ></mensaje-notificacion>
       <mensaje-notificacion
         :imagen="'https://imgur.com/NJjxyzY.jpg'"
